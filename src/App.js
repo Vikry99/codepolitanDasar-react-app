@@ -1,3 +1,4 @@
+import Button from 'react-bootstrap/Button';
 import React, { Component } from 'react';
 import './App.css';
 import MenuMakanan from './components/MenuMakanan';
@@ -24,12 +25,12 @@ class App extends Component {
   return (
     <div className="App">
         <h1>Cofe dan {this.state.namaResto} </h1>
-        <h2>Menu Makanan</h2>
+        <h2 className='header-menu'>Menu Makanan</h2>
         <MenuMakanan menuMakanan={"Ayam gorem"} hargaMenu={"50.000.00"}/>
         <h2>Menu Minuman</h2>
         <MenuMinuman menuMinuman={"Juice Anggur"} hargaMenu={"25.000.000"}/> 
         <MenuMinuman menuMinuman={"Juice Pepaya"} hargaMenu={"15.000.000"}/>
-        <button onClick={() => this.handlerGantiNamaResto("Programmer")} style={{color:"black", backgroundColor: "gray", margin:"15px 20px", cursor: 'pointer'}}>Ganti Nama Resto</button>
+        <Button onClick={() => this.handlerGantiNamaResto("Programmer")} variant="primary" className='btn btn-primary'>Ganti Nama Resto</Button>
     </div>
   );
 }
